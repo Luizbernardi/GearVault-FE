@@ -1,59 +1,120 @@
-# Sakai19
+# GearVault
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white) ![PrimeNG](https://img.shields.io/badge/PrimeNG-4CAF50?style=for-the-badge&logo=primeng&logoColor=white) ![PrimeFlex](https://img.shields.io/badge/PrimeFlex-2196F3?style=for-the-badge&logo=primeflex&logoColor=white)
 
-## Development server
+## Índice
 
-To start a local development server, run:
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Funcionalidades Principais](#funcionalidades-principais)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Executando o Projeto](#executando-o-projeto)
+- [Comandos Úteis](#comandos-úteis)
+- [Testes](#testes)
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Sobre o Projeto
 
-## Code scaffolding
+O **GearVault** é um sistema de gerenciamento de estoque e aquisições de componentes eletrônicos desenvolvido em **Angular**. Ele utiliza **PrimeNG** e **PrimeFlex** para criar uma interface moderna, responsiva e funcional.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Este projeto foi gerado usando **Angular CLI versão 19.0.6**.
 
-```bash
-ng generate component component-name
-```
+### Principais Objetivos
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Facilitar o controle de compras e gerenciamento de estoque.
+- Automatizar processos como extração de dados de invoices.
+- Rastrear estoque e gerar relatórios detalhados.
+- Atender instituições de pesquisa, laboratórios tecnológicos e empresas que lidam com aquisição e armazenamento de componentes.
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## Funcionalidades Principais
 
-To build the project run:
+✅ **Upload de Invoices**: Permite o upload de invoices (documentos de compra) e extração automática de dados.
 
-```bash
-ng build
-```
+✅ **Controle de Estoque**: Exibe a quantidade disponível de cada componente e sua localização de armazenamento.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+✅ **Histórico de Compras**: Visualize todas as compras realizadas no passado, com filtros avançados.
 
-## Running unit tests
+✅ **Relatórios Personalizados**: Gere relatórios detalhados sobre compras e estoque.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+✅ **Interface Responsiva**: Design adaptável para diferentes dispositivos (desktops, tablets e smartphones).
 
+---
+
+## Pré-requisitos
+
+Antes de iniciar o projeto, certifique-se de que você tenha as seguintes ferramentas instaladas:
+
+- **[Node.js](https://nodejs.org/)** (Versão 16 ou superior)
+- **[Angular CLI](https://angular.io/cli)** (Versão 19 ou superior)
+  ```bash
+  npm install -g @angular/cli
+  ```
+- **[Git](https://git-scm.com/)** (Para clonar o repositório)
+
+---
+
+## Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/gearvault.git
+   cd gearvault
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Verifique as variáveis de ambiente:
+   Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis (se aplicável):
+   ```env
+   API_URL=http://localhost:3000/api
+   JWT_SECRET=your-secret-key
+   ```
+
+---
+
+## Executando o Projeto
+
+1. Inicie o servidor de desenvolvimento:
+   ```bash
+   ng serve
+   ```
+2. Acesse o projeto no navegador:
+   ```
+   http://localhost:4200
+   ```
+
+
+---
+
+## Comandos Úteis
+
+🔹 **Gerar um novo componente:**
+   ```bash
+   ng generate component nome-do-componente
+   ```
+🔹 **Compilar o projeto:**
+   ```bash
+   ng build
+   ```
+🔹 **Executar testes unitários:**
+   ```bash
+   ng test
+   ```
+🔹 **Executar testes de ponta a ponta (E2E):**
+   ```bash
+   ng e2e
+   ```
+
+---
+
+## Testes
+
+### Testes Unitários
+Para executar testes unitários com **Karma**, utilize:
 ```bash
 ng test
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
